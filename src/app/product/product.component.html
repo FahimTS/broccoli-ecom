@@ -14,11 +14,13 @@
             <div class="product_info">
                 <div class="product_ratting">
                     <ul class="pdc_start">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
+                        <li *ngFor="let star of stars; let i = index" (click)="rateProduct(i + 1)">
+                              <i class="fa" [ngClass]="{
+                                    'fa-solid fa-star filled': i < currentRating,
+                                    'fa-regular fa-star': i >= currentRating
+                                }"></i>
+                        </li>
+
                     </ul>
                 </div>
                 <h2><a href="#">{{cardData.productTitle}}</a></h2>

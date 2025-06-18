@@ -126,50 +126,59 @@ export class HomeComponent {
   ];
 
   featuredproduct: FeaturedProduct = {
+    productId: 1,
       productImg: '../../assets/img/featured-product/1.webp',
       productTitle: 'W. p m product',
-      productRate: '$39.00'
+      productRate: 39.00
   }
   featuredproducts: FeaturedProduct[] = [
     {
+      productId: 1,
       productImg: '../../assets/img/featured-product/1.webp',
       productTitle: 'W. p m product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 2,
       productImg: '../../assets/img/featured-product/2.webp',
       productTitle: 'ZD. s product',
-      productRate: '$70.00'
+      productRate: 70.00
     },
     {
+      productId: 3,
       productImg: '../../assets/img/featured-product/3.webp',
       productTitle: 'ZD. s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 4,
       productImg: '../../assets/img/featured-product/4.webp',
       productTitle: 'W. p m product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 5,
       productImg: '../../assets/img/featured-product/5.webp',
       productTitle: 'ZE. v w s product',
-      productRate: '$99.00'
+      productRate: 99.00
     },
     {
+      productId: 6,
       productImg: '../../assets/img/featured-product/6.webp',
       productTitle: 'ZE. v w s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 7,
       productImg: '../../assets/img/featured-product/7.webp',
       productTitle: 'J. l p t Praesent adipiscing.',
-      productRate: '$19.00'
+      productRate: 19.00
     },
     {
+      productId: 8,
       productImg: '../../assets/img/featured-product/8.webp',
       productTitle: 'X. n/s product title',
-      productRate: '$33.00'
+      productRate: 33.00
     }
   ];
   testimonial: Testimonial = {

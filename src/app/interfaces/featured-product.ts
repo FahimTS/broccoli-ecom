@@ -1,5 +1,6 @@
 export interface FeaturedProduct {
+    productId: number;
     productImg: string;
     productTitle: string;
-    productRate: string;
+    productRate: number;
 }
