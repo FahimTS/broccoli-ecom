@@ -24,6 +24,8 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 import { ScrollDirective } from './scroll.directive';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { ClaimComponent } from './claim/claim.component';
+import { PractiseComponent } from './practise/practise.component';
+
 
 
 register();
@@ -47,6 +49,8 @@ register();
     ScrollDirective,
     TermsOfServiceComponent,
     ClaimComponent,
+    PractiseComponent,
+
     
   ],
   imports: [

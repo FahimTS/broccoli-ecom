@@ -3,12 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { ClaimComponent } from './claim/claim.component';
+import { PractiseComponent } from './practise/practise.component';
+
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'terms-of-service', component: TermsOfServiceComponent},
-  {path: 'claim', component: ClaimComponent}
+  {path: 'claim', component: ClaimComponent},
+  {path: 'practise', component: PractiseComponent}
+
+
 ];
 
 @NgModule({

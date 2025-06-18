@@ -12,98 +12,116 @@ import { Testimonial } from 'src/app/interfaces/testimonial';
 })
 export class HomeComponent {
   product: Product = {
+    productId: 1,
     productImg: '../../assets/img/product/1.webp',
     productTitle: 'Q. s product',
-    productRate: '$39.00'
+    productRate: 39.00
   };
   products: Product[] = [
     {
+      productId: 2,
       productImg: '../../assets/img/product/1.webp',
       productTitle: 'Q. s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 3,
       productImg: '../../assets/img/product/2.webp',
       productTitle: 'C. v product',
-      productRate: '$70.00'
+      productRate: 70.00
     },
     {
+      productId: 4,
       productImg: '../../assets/img/product/3.webp',
       productTitle: 'H. c d product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 5,
       productImg: '../../assets/img/product/4.webp',
       productTitle: 'K. p v product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 6,
       productImg: '../../assets/img/product/5.webp',
       productTitle: 'L. u c e product',
-      productRate: '$99.00'
+      productRate: 99.00
     },
     {
+      productId: 7,
       productImg: '../../assets/img/product/6.webp',
       productTitle: 'E. s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 8,
       productImg: '../../assets/img/product/7.webp',
       productTitle: 'J. l p t Praesent adipiscing.',
-      productRate: '$19.00'
+      productRate: 19.00
     },
     {
+      productId: 9,
       productImg: '../../assets/img/product/8.webp',
       productTitle: 'P. s o product',
-      productRate: '$33.00'
+      productRate: 33.00
     }
   ];
 
   productTwo: Product = {
+    productId: 1,
     productImg: '../../assets/img/product-two/1.webp',
     productTitle: 'W. p m product',
-    productRate: '$39.00'
+    productRate: 39.00
   };
   productsTwo: Product[] = [
     {
+      productId: 2,
       productImg: '../../assets/img/product-two/1.webp',
       productTitle: 'W. p m product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 3,
       productImg: '../../assets/img/product-two/2.webp',
       productTitle: 'ZD. s product',
-      productRate: '$70.00'
+      productRate: 70.00
     },
     {
+      productId: 4,
       productImg: '../../assets/img/product-two/1.webp',
       productTitle: 'ZD. s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 5,
       productImg: '../../assets/img/product-two/3.webp',
       productTitle: 'W. p m product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 6,
       productImg: '../../assets/img/product-two/4.webp',
       productTitle: 'ZE. v w s product',
-      productRate: '$99.00'
+      productRate: 99.00
     },
     {
+      productId: 7,
       productImg: '../../assets/img/product-two/5.webp',
       productTitle: 'ZE. v w s product',
-      productRate: '$39.00'
+      productRate: 39.00
     },
     {
+      productId: 8,
       productImg: '../../assets/img/product-two/6.webp',
       productTitle: 'J. l p t Praesent adipiscing.',
-      productRate: '$19.00'
+      productRate: 19.00
     },
     {
+      productId: 9,
       productImg: '../../assets/img/product-two/7.webp',
       productTitle: 'X. n/s product title',
-      productRate: '$33.00'
+      productRate: 33.00
     }
   ];
 
