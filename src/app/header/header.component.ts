@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from '../services/cart';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,41 +6,8 @@ import { CartService } from '../services/cart';
   styleUrls: ['./header.component.scss']
 })
  
-export class HeaderComponent implements OnInit{
+export class HeaderComponent{
 
-  menuIconXbar:boolean = true;
-  menuBars: boolean = false;
-  openMenu(){
-    this.menuBars =! this.menuBars;
-    this.menuIconXbar =! this.menuIconXbar;
-  }
 
-  isCartOpen:boolean = false;
-toggleCart() {
-  this.isCartOpen = !this.isCartOpen;
-}
-
- cartItems: any[] = [];
-  subtotal: number = 0;
-totalQuantity: number = 0;
-
-  constructor(private cartService: CartService) {}
-
-  ngOnInit(): void {
-    this.cartService.cart$.subscribe((items) => {
-      this.cartItems = items;
-      this.subtotal = this.cartService.getSubtotal();
-      this.totalQuantity = this.cartService.getTotalQuantity();
-
-    });
-
-    this.cartService.cartVisibility$.subscribe((visible) => {
-      this.isCartOpen = visible;
-    });
-  }
-
-  removeFromCart(item: any) {
-    this.cartService.removeItem(item);
-  }
 
 }

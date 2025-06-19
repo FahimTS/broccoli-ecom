@@ -25,6 +25,8 @@ import { ScrollDirective } from './scroll.directive';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { ClaimComponent } from './claim/claim.component';
 import { PractiseComponent } from './practise/practise.component';
+import { CartComponent } from './cart/cart.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -50,6 +52,8 @@ register();
     TermsOfServiceComponent,
     ClaimComponent,
     PractiseComponent,
+    CartComponent,
+    NavbarComponent,
 
     
   ],
