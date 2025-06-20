@@ -1,11 +1,11 @@
 <div class="bottom_header">
     <div class="header_logo">
-        <a routerLink="/"><img src="../../assets/img/logo_150x.webp" alt=""></a>
+        <a routerLink="/"><img [src]="currentRoute === '/cart' ? '../../assets/img/logo-2.png' : '../../assets/img/logo_150x.webp' " alt="logo"></a>
     </div>
     <div class="header_main_menu">
-        <ul class="main_menu">
+        <ul class="main_menu" [ngClass]="{ 'cart-page-style': currentRoute === '/cart' }">
             <li class="menu"><a routerLink="/">Home +</a>
-                <ul class="sub_menu_drop">
+                <ul class="sub_menu_drop" [ngClass]="{ 'cart-submenu-style': currentRoute === '/cart' }">
                     <li><a href="#">Home Style 1</a></li>
                     <li><a href="#">Home Style 2</a></li>
                     <li><a href="#">Home Style 3</a></li>
