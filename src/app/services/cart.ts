@@ -45,6 +45,38 @@ export class CartService {
     this.cartVisible.next(!current);
   }
 
+  getCartItems(): any[] {
+    return [...this.cartItems]; // return a copy
+  }
+
+  getShippingCost(): number {
+  return 10; // or any fixed value
+  }
+
+  getVat(): number {
+    return this.getSubtotal() * 0.05; // 5% VAT
+  }
+
+  getTotal(): number {
+    return this.getSubtotal() + this.getVat() + this.getShippingCost();
+  }
+
+  updateQuantity(productId: number, change: number){
+    const index = this.cartItems.findIndex(p => p.id === productId);
+    if(index != -1){
+     this.cartItems[index].quantity += change;
+
+    // Quantity 0 বা এর কম হলে remove করে দিচ্ছি
+      if (this.cartItems[index].quantity <= 0) {
+      this.removeItem(this.cartItems[index]);
+    } else {
+      this.updateCart();
+    }
+    }
+
+
+  }
+
   // 🔽 Save to localStorage and notify
   private updateCart() {
     localStorage.setItem(this.cartStorageKey, JSON.stringify(this.cartItems));

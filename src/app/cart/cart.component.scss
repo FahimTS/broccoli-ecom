@@ -20,6 +20,7 @@
     z-index: 1;
     top: 35px;
 }
+
 .cart_inner {
     position: absolute;
     z-index: 2;
@@ -86,19 +87,28 @@ position: absolute;
 
 
 // shopping cart start
-.cart-product-remove {
+.shopping_cart_area{
+    .cart-product-remove {
     font-size: 18px;
     cursor: pointer;
 }
+.shopping_cart_table{
+    height: 460px;
+    overflow-y: scroll;
 
 .shopping_cart_list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // padding-right: 60px;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px 30px;
 }
-
+.cart-product-image {
+    width: 10%;
+}
 .cart-product-image a img {
-    width: 90px;
+    width: 98px;
 }
 
 .cart-plus-minus {
@@ -107,10 +117,10 @@ position: absolute;
 
 .cart-plus-minus input {
     width: 30%;
-}
-
-.dec.qtybutton {
-    width: 40px;
+    border: 1px solid #ddd;text-align: center;
+    font-weight: 500;
+    font-family: 'Rajdhani';
+    font-size: 20px;
 }
 .cart-product-info a {
     color: #071c1f;
@@ -126,4 +136,133 @@ position: absolute;
 
 .cart-product-price {
     font-size: 16px;
+    width: 10%;
+}
+
+.qtybutton {width: 25%;height: 100%;border: 1px solid #ddd;padding: 13px 15px;cursor: pointer;
+    font-weight: 700; font-family: 'Rajdhani'; text-align: center; font-size: 18px;
+}
+.cart-product-subtotal {
+    font-weight: 700;
+    font-size: 19px;
+    font-family: 'Rajdhani';
+}
+
+.cart-product-info {
+    width: 15%;
+}
+
+.cart-product-quantity {
+    width: 15%;
+}
+
+
+}
+}
+.shopping_cart_table::-webkit-scrollbar {
+  width: 2.5px;
+}
+
+.shopping_cart_table::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.shopping_cart_table::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.shopping_cart_table::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.coupon_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 43px 0px;
+}
+
+
+.coupon_let input {
+    padding: 18px 45px 18px 20px;
+    border: 2px solid #ddd;
+}
+
+.coupon_let input::placeholder {
+    color: #111;
+}
+
+.coupon_let button {
+    padding: 19px 25px;
+    background: #111;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Rajdhani';
+    font-size: 15px;
+    margin-left: 10px;
+}
+.coupon_right button{
+    padding: 18px 32px;
+    background: #111;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Rajdhani';
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+// total cart shipping
+
+.cart_total_box {
+    width: 375px;
+    margin-left: 69%;
+}
+
+.cart_total_box h3 {
+    font-weight: 700;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+}
+
+.cart_subtotal, .shipping_handing, .vat, .ordar_total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px 0px 10px;
+    border-bottom: 1px solid #ddd;
+}
+.title h4{
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+.price p{
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.ordar_total .title h4 {
+    font-weight: 700 !important;
+    font-family: 'Rajdhani';
+    font-size: 17px;
+}
+.ordar_total .price p{
+    font-weight: 700 !important;
+    font-family: 'Rajdhani';
+    font-size: 17px;
+}
+.cart_quantity {
+    background: #FAFAFA;
+}
+.proceed_to_checkout button {
+    width: 100%;
+    padding: 16px;
+    background: #80B500;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
 }

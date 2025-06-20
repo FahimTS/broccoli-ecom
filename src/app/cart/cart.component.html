@@ -26,31 +26,96 @@
     <div class="container">
     <div class="shopping_cart_inner">
         <div class="shopping_cart_table">
-            <div class="shopping_cart_list">
-                    <div class="cart-product-remove">x</div>
+            <div class="shopping_cart_list" *ngFor="let item of cartItems">
+                    <div class="cart-product-remove" (click)="removeItem(item)">x</div>
                     <div class="cart-product-image">
                         <a href="">
-                            <img src="../../assets/img/product/1.webp" alt="">
+                            <img [src]="item.image || '../../assets/img/product/1.webp'" alt="">
                         </a>
                     </div>
                     <div class="cart-product-info">
                         <h4>
-                            <a href="">Vegetables Juices</a>
+                            <a href="">{{item.name}}</a>
                         </h4>
                     </div>
-                    <div class="cart-product-price">$149.00</div>
+                    <div class="cart-product-price">${{ item.price }}</div>
                     <div class="cart-product-quantity">
                         <div class="cart-plus-minus">
-                            <div class="dec qtybutton">-</div>
-                            <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
-                            <div class="inc qtybutton">+</div>
+                            <div class="dec qtybutton" (click)="decreaseQty(item)">-</div>
+                            <input type="text" [value]="item.quantity" class="cart-plus-minus-box" readonly>
+                            <div class="inc qtybutton" (click)="increaseQty(item)">+</div>
                         </div>
                     </div>
-                    <div class="cart-product-subtotal">$298.00</div>
+                    <div class="cart-product-subtotal">${{ item.price * item.quantity }}</div>
             </div>
-                
+
         </div>
     </div>
     </div>
  </section>
 <!-- shopping cart section end -->
+
+<!-- coupon code section start -->
+
+<section class="coupon_box">
+    <div class="container">
+        <div class="coupon_inner">
+            <div class="coupon_let">
+                <input #couponInput type="text" placeholder="Coupon code">
+                <button (click)="applyCoupon(couponInput.value)">Apply Coupon</button>
+            </div>
+            <div class="coupon_right">
+                <button (click)="updateCart()">Update Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- coupon code section end -->
+
+<!-- cart total section start -->
+ <section class="cart_total">
+    <div class="container">
+        <div class="cart_total_box">
+            <h3>Cart Totals</h3>
+            <div class="cart_quantity">
+                <div class="cart_subtotal">
+                    <div class="title">
+                        <h4>Cart Subtotal</h4>
+                    </div>
+                    <div class="price">
+                        <p>${{ subtotal }}</p>
+                    </div>
+                </div>
+                <div class="shipping_handing">
+                    <div class="title">
+                        <h4>Shipping and Handing</h4>
+                    </div>
+                    <div class="price">
+                        <p>${{ shipping }}</p>
+                    </div>
+                </div>
+                <div class="vat">
+                    <div class="title">
+                        <h4>Vat</h4>
+                    </div>
+                    <div class="price">
+                        <p>${{ vat }}</p>
+                    </div>
+                </div>
+                <div class="ordar_total">
+                    <div class="title">
+                        <h4>Order Total</h4>
+                    </div>
+                    <div class="price">
+                        <p>${{ grandTotal }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="proceed_to_checkout">
+                <button type="button">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+ </section>
+<!-- cart total section end -->
