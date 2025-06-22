@@ -27,7 +27,7 @@ import { ClaimComponent } from './claim/claim.component';
 import { PractiseComponent } from './practise/practise.component';
 import { CartComponent } from './cart/cart.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { ProductViewCartComponent } from './product-view-cart/product-view-cart.component';
 
 
 register();
@@ -54,8 +54,8 @@ register();
     PractiseComponent,
     CartComponent,
     NavbarComponent,
+    ProductViewCartComponent,
 
-    
   ],
   imports: [
     BrowserModule,

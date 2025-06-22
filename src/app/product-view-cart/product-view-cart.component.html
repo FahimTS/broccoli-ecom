@@ -1,0 +1,101 @@
+<!-- cart banner section start -->
+<div class="cart_banner">
+    <div class="container">
+        <div class="menu_bar">
+            <app-navbar></app-navbar>
+        </div>
+
+        <div class="cart_inner">
+            <div class="welcome_part">
+                <h6>// Welcome to our company</h6>
+                <h1>Product View</h1>
+            </div>
+            <div class="back_home_part">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>View</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart banner section end -->
+
+<!-- product view cart start -->
+ <section class="product_view_cart">
+    <div class="container">
+        <div class="product_view">
+            <div class="product_view_content">
+                <div class="modal_img">
+                    <img [src]="product.productImg" alt="product">
+                </div>
+                <div class="modal_info">
+                    <div class="product_title">
+                        <h3>{{product.productTitle}}</h3>
+                    </div>
+                    <div class="product_price">
+                        <span>${{product.productRate}}</span>
+                        <del *ngIf="product.oldPrice">${{product.oldPrice}}</del>
+                    </div>
+                    <div class="product_categories">
+                        <ul>
+                            <li>
+                                <strong>Categories:</strong>
+                                <span *ngFor="let cat of product.categories; let last = last">
+                                    <span *ngIf="!last">, </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-quantity">
+                        <ul>
+                            <li class="view_cart_incdec">
+                        <div class="cart-plus-minus">
+                            <div class="dec qtybutton" (click)="decreaseQty()">-</div>
+                            <input type="text" [value]="quantity" class="cart-plus-minus-box" readonly>
+                            <div class="inc qtybutton"(click)="increaseQty()">+</div>
+                        </div>
+                            </li>
+                            <li>
+                                <a href="" class="add-to-cart" (click)="addToCart()">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>ADD TO CART</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="product_whitelist">
+                        <ul>
+                            <li>
+                                <a href="">
+                                <i class="far fa-heart"></i>
+                                <span>Add to Wishlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <span>Compare</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product_share">
+                        <div class="product_shr_title">
+                            <h4>Share:</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<!-- product view cart end -->

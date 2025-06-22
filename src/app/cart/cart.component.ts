@@ -9,8 +9,8 @@ import { CartService } from '../services/cart';
 export class CartComponent implements OnInit{
   cartItems: any[] = [];
   subtotal: number = 0;
-  shipping: number = 160;
-  vat: number = 160;
+  shipping: number = 10;
+  vat: number = 2.5;
 
   constructor(private cartService: CartService) {}
 

@@ -1,0 +1,230 @@
+.cart_banner{
+    background-image: url('../../assets/img/cart_img/brolocci_food_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 470px;
+    position: relative;
+    top: -6px;
+    &::after {
+    content: "";
+    position: absolute;
+    background-color: #071c1f;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.9;
+}
+.menu_bar {
+    position: relative;
+    z-index: 1;
+    top: 35px;
+}
+
+.cart_inner {
+    position: absolute;
+    z-index: 2;
+    padding-top: 215px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 85%;
+    overflow: hidden;
+}
+
+.welcome_part h6 {
+    color: #80B500;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+}
+
+.welcome_part h1 {
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.back_home_part ul {
+    display: flex;
+    align-items: center;
+}
+
+.back_home_part ul li {
+    color: #61B500;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Rajdhani';
+    position: relative;
+}
+
+.back_home_part ul li a {
+    color: #bebebe;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s;
+    
+}
+.back_home_part ul li a:hover{
+    color: #61B500;
+}
+.back_home_part ul li:after{
+position: absolute;
+    content: "";
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 2px;
+    background-color: #ddd;
+    opacity: 0.5;
+}
+}
+
+// product view cart
+.modal_img img {border-radius: 10px;width: 100%;}
+
+.modal_img {
+    width: 515px;
+}
+
+.product_view_content {
+    display: flex;
+}
+
+.modal_info {margin-left: 45px;}
+
+.product_title h3 {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Rajdhani';
+}
+
+.product-quantity ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.product_categories ul {
+    padding: 0;
+}
+
+.product_whitelist ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.product_price span {
+    font-size: 50px;
+    color: #80B500;
+    font-weight: 500;
+}
+
+.product_price del {
+    font-size: 38px;
+    color: #B3D366;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.product_price {
+    margin-top: 40px;
+}
+a.add-to-cart {
+    display: block;
+    text-align: center;
+    width: 160px;
+    background: #80B500;
+    color: #fff;
+    padding: 15px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Rajdhani';
+    margin-left: 30px;
+}
+
+a.add-to-cart i {
+    margin-right: 10px;
+}
+
+.product-quantity {
+    margin-top: 35px;
+}
+.product_categories {
+    margin-top: 35px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 22px 10px 10px 0px;
+}
+
+.product_categories ul li strong {
+    font-weight: 400;
+    font-size: 16px;
+    color: #071c1f;
+    margin-right: 40px;
+}
+
+.product_categories ul li span a {
+    color: #071c1f;
+    font-weight: 500;
+    margin-right: 8px;
+}
+.cart-plus-minus {
+    display: flex;
+}
+
+.cart-plus-minus input {
+    width: 50px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-weight: 500;
+    font-family: "Rajdhani";
+    font-size: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.qtybutton {width: 38px;height: 100%;border: 1px solid #ddd;padding: 13px 15px;cursor: pointer;
+    font-weight: 700; font-family: 'Rajdhani'; text-align: center; font-size: 20px;
+}
+.product_whitelist ul li a {
+    color: #071c1f;
+}
+
+.product_whitelist ul li a i {
+    margin-right: 8px;
+}
+
+.product_whitelist ul li {
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+
+.product_share ul {
+    display: flex;
+    align-items: center;
+}
+
+.product_share {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.product_share ul li {
+    margin-right: 18px;
+    font-size: 16px;
+}
+
+.product_share ul li a {
+    color: #071c1f;
+    font-size: 16px;
+}
+

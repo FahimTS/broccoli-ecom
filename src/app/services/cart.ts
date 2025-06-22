@@ -76,6 +76,7 @@ export class CartService {
 
 
   }
+  
 
   // 🔽 Save to localStorage and notify
   private updateCart() {
@@ -98,4 +99,6 @@ export class CartService {
     localStorage.removeItem(this.cartStorageKey);
     this.cartSubject.next(this.cartItems);
   }
+
 }
+

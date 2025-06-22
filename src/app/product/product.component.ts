@@ -20,6 +20,7 @@ export class ProductComponent {
     
   }
 
+
 addToCart(cardData: Product) {
   const cartItem = {
     id: this.cardData.productId,

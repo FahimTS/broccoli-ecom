@@ -146,6 +146,7 @@ position: absolute;
     font-weight: 700;
     font-size: 19px;
     font-family: 'Rajdhani';
+    width: 55px;
 }
 
 .cart-product-info {
@@ -265,4 +266,8 @@ position: absolute;
     font-weight: 700;
     font-family: 'Rajdhani', sans-serif;
     font-size: 15px;
+    transition: all 0.3s;
+}
+.proceed_to_checkout button:hover {
+    background: #111 !important;
 }

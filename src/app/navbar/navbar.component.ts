@@ -39,6 +39,11 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  isCartRelatedPage(): boolean {
+    const cartPage = ['/cart', '/product-view-cart'];
+    return cartPage.includes(this.currentRoute)
+  }
+
   openMenu() {
     this.menuBars = !this.menuBars;
     this.menuIconXbar = !this.menuIconXbar;
