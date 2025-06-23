@@ -1,7 +1,8 @@
 export interface Product {
-    productId: number;
-    productImg: string;
-    productTitle: string;
-    productRate: number;
-
+  productId: number;
+  productTitle: string;
+  productRate: number;
+  oldPrice?: number;
+  productImg: string;
+  categories?: string[] | null;
 }

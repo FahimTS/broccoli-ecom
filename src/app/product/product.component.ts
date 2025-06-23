@@ -23,16 +23,17 @@ export class ProductComponent {
 
 addToCart(cardData: Product) {
   const cartItem = {
-    id: this.cardData.productId,
-    name: this.cardData.productTitle,
-    price: Number(this.cardData.productRate),
-    image: this.cardData.productImg
-   
+    id: cardData.productId,
+    name: cardData.productTitle,
+    price: Number(cardData.productRate),
+    image: cardData.productImg,
+    quantity: 1,
+    subtotal: Number(cardData.productRate) * 1
   };
 
   this.cartService.addToCart(cartItem);
-  
 }
+
 
 
 

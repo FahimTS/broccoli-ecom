@@ -17,12 +17,22 @@ export class CartService {
     this.loadCart(); // cart load from localStorage on service init
   }
 
+
   addToCart(product: any) {
     const index = this.cartItems.findIndex(p => p.id === product.id);
     if (index !== -1) {
-      this.cartItems[index].quantity += 1;
+      this.cartItems[index].quantity += product.quantity || 1;
+      this.cartItems[index].subtotal = this.cartItems[index].quantity * this.cartItems[index].price;
     } else {
-      this.cartItems.push({ ...product, quantity: 1 });
+      const itemToAdd = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        quantity: product.quantity || 1,
+        subtotal: (product.quantity || 1) * product.price
+      };
+      this.cartItems.push(itemToAdd);
     }
     this.updateCart();
   }

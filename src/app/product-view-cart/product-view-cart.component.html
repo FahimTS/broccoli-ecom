@@ -41,8 +41,8 @@
                         <ul>
                             <li>
                                 <strong>Categories:</strong>
-                                <span *ngFor="let cat of product.categories; let last = last">
-                                    <span *ngIf="!last">, </span>
+                                <span *ngFor="let cat of product.categories">
+                                    <span>{{cat + ' '}}</span>
                                 </span>
                             </li>
                         </ul>
@@ -57,10 +57,10 @@
                         </div>
                             </li>
                             <li>
-                                <a href="" class="add-to-cart" (click)="addToCart()">
+                                <button href="" class="add-to-cart" (click)="addToCart()">
                                     <i class="fas fa-shopping-cart"></i>
                                     <span>ADD TO CART</span>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>

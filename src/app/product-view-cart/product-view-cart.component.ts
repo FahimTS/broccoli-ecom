@@ -21,7 +21,13 @@ export class ProductViewCartComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.product = this.productService.getProductById(id);
+    const foundProduct = this.productService.getProductById(id);
+
+    if (foundProduct) {
+      this.product = foundProduct;
+    } else {
+      console.error('Product not found for ID:', id);
+    }
   }
 
   increaseQty() {
@@ -34,14 +40,26 @@ export class ProductViewCartComponent implements OnInit {
     }
   }
 
-  addToCart() {
-    const productToAdd = {
-      ...this.product,
-      quantity: this.quantity
-    };
-    this.cartService.addToCart(productToAdd);
-    alert('Added to cart!');
+addToCart() {
+  if (!this.product) {
+    console.error('No product to add');
+    return;
   }
+
+  const productToAdd = {
+    id: this.product.productId, // ✅ id নামেই দিতে হবে
+    name: this.product.productTitle,
+    price: this.product.productRate,
+    image: this.product.productImg,
+    quantity: this.quantity,
+    subtotal: this.quantity * this.product.productRate
+  };
+
+  this.cartService.addToCart(productToAdd);
+
+}
+
+
   
 
 }
