@@ -6,6 +6,7 @@ import { ClaimComponent } from './claim/claim.component';
 import { PractiseComponent } from './practise/practise.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductViewCartComponent } from './product-view-cart/product-view-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'claim', component: ClaimComponent},
   {path: 'practise', component: PractiseComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'product-view/:id', component: ProductViewCartComponent}
+  {path: 'product-view/:id', component: ProductViewCartComponent},
+  {path: 'checkout', component: CheckoutComponent}
 
 ];
 

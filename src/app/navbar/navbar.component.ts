@@ -40,8 +40,8 @@ export class NavbarComponent implements OnInit {
   }
 
   isCartRelatedPage(): boolean {
-    const cartPage = ['/cart', '/product-view-cart'];
-    return cartPage.includes(this.currentRoute)
+    const cartPage = ['/cart', '/checkout'];
+    return cartPage.includes(this.currentRoute) || this.currentRoute.startsWith('/product-view/');
   }
 
   openMenu() {

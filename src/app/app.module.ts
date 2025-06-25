@@ -28,6 +28,7 @@ import { PractiseComponent } from './practise/practise.component';
 import { CartComponent } from './cart/cart.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductViewCartComponent } from './product-view-cart/product-view-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 register();
@@ -55,6 +56,7 @@ register();
     CartComponent,
     NavbarComponent,
     ProductViewCartComponent,
+    CheckoutComponent,
 
   ],
   imports: [
