@@ -55,10 +55,11 @@
                     <h5>Country</h5>
                     <select name="" id="">
                         <option value="">Select</option>
-                        <option value="">1</option>
-                        <option value="">1</option>
-                        <option value="">1</option>
-                        <option value="">1</option>
+                        <option value="">Bangladesh</option>
+                        <option value="">Pakistan</option>
+                        <option value="">India</option>
+                        <option value="">UK</option>
+                        <option value="">US</option>
                     </select>
                 </div>
                 <div class="home_town">
@@ -103,3 +104,105 @@
     </div>
  </div>
 <!-- billing details end -->
+
+<!-- payment method start -->
+ <div class="method_cart">
+    <div class="container">
+        <div class="payment_method">
+            <h2>Payment Method</h2>
+
+            <div class="card_method">
+
+            <div class="payment-option" (click)="togglePayment('check')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'check'"
+            />
+            <label>Check payments</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'check'" class="collapse-box">
+            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+            </div>
+
+            <div class="payment-option" (click)="togglePayment('card')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'card'"
+            />
+            <label>Credit Card</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'card'" class="collapse-box">
+            <p>Enter your card details:</p>
+            <input type="text" placeholder="Card Number" />
+            <input type="text" placeholder="MM/YY" />
+            <input type="text" placeholder="CVV" />
+            </div>
+
+            <div class="payment-option" (click)="togglePayment('cash')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'cash'"
+            />
+            <label>Cash on delivery</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'cash'" class="collapse-box">
+            <p>Pay with cash upon delivery.</p>
+            </div>
+
+                <div class="payment-option" (click)="togglePayment('bkash')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'bkash'"
+            />
+            <label>bKash</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'bkash'" class="collapse-box">
+            <p>bKash Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
+            <p>Send money and enter Transaction ID:</p>
+            <input type="text" placeholder="TrxID" />
+            </div>
+
+            <div class="payment-option" (click)="togglePayment('nagad')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'nagad'"
+            />
+            <label>Nagad</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'nagad'" class="collapse-box">
+            <p>Nagad Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
+            <p>Enter Transaction ID:</p>
+            <input type="text" placeholder="TrxID" />
+            </div>
+
+            <div class="payment-option" (click)="togglePayment('rocket')">
+            <input
+                type="radio"
+                name="payment"
+                [checked]="selectedMethod === 'rocket'"
+            />
+            <label>Rocket</label>
+            </div>
+
+            <div *ngIf="selectedMethod === 'rocket'" class="collapse-box">
+            <p>Rocket Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
+            <p>Enter Transaction ID:</p>
+            <input type="text" placeholder="TrxID" />
+            </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- payment method end -->

@@ -30,50 +30,35 @@
     justify-content: space-between;
     width: 85%;
     overflow: hidden;
-}
-
-.welcome_part h6 {
+    .welcome_part{
+      h6 {
     color: #80B500;
     font-size: 18px;
     font-weight: 700;
     font-family: 'Rajdhani', sans-serif;
     text-transform: uppercase;
-}
-
-.welcome_part h1 {
+        }
+        h1 {
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: 45px;
     margin-top: 20px;
-}
-
-.back_home_part ul {
+    } 
+    }
+    .back_home_part{
+        ul {
     display: flex;
     align-items: center;
-}
-
-.back_home_part ul li {
-    color: #61B500;
-    margin-left: 25px;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'Rajdhani';
-    position: relative;
-}
-
-.back_home_part ul li a {
-    color: #bebebe;
-    font-size: 18px;
-    font-weight: 700;
-    transition: all 0.3s;
-    
-}
-.back_home_part ul li a:hover{
-    color: #61B500;
-}
-.back_home_part ul li:after{
-position: absolute;
+    li {
+        color: #61B500;
+        margin-left: 25px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Rajdhani';
+        position: relative;
+        &:after{
+    position: absolute;
     content: "";
     right: -14px;
     top: 50%;
@@ -82,6 +67,19 @@ position: absolute;
     width: 2px;
     background-color: #ddd;
     opacity: 0.5;
+}
+        a {
+    color: #bebebe;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s;
+    &:hover{
+    color: #61B500;
+    }
+    }
+    }
+    }
+    }
 }
 }
 
@@ -186,4 +184,72 @@ p{
 
 .towncity {
     width: 100%;
+}
+.payment-option {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.payment-option:hover {
+  background-color: #f2f2f2;
+}
+
+.card_method_pay {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: #f2f2f2;
+    }
+}
+
+.collapse-box {
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-left: 3px solid #007bff;
+  background-color: #f9f9f9;
+  animation: fadeIn 0.3s ease-in-out;
+}
+label {
+    font-size: 18px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: #071c1f;
+}
+// input[type="text"] {
+//   display: block;
+//   width: 100%;
+//   margin-top: 5px;
+//   margin-bottom: 10px;
+//   padding: 8px;
+//   border-radius: 4px;
+//   border: 1px solid #ccc;
+// }
+.method_cart {margin-top: 75px;}
+
+.payment_method {
+    width: 50%;
+}
+
+.payment_method h2 {
+    font-size: 26px;
+    font-family: 'Rajdhani';
+    font-weight: 700;
+}
+
+.card_method {
+    margin-top: 30px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
