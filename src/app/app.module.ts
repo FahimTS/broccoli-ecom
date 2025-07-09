@@ -29,6 +29,8 @@ import { CartComponent } from './cart/cart.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductViewCartComponent } from './product-view-cart/product-view-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 
 register();
@@ -57,6 +59,7 @@ register();
     NavbarComponent,
     ProductViewCartComponent,
     CheckoutComponent,
+    OrderConfirmationComponent
 
   ],
   imports: [
@@ -66,6 +69,8 @@ register();
     NgbCarouselModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

@@ -5,7 +5,7 @@
     <div class="header_main_menu">
         <ul class="main_menu" [ngClass]="{ 'cart-page-style': isCartRelatedPage() }">
             <li class="menu"><a routerLink="/">Home +</a>
-                <ul class="sub_menu_drop" [ngClass]="{ 'cart-submenu-style': isCartRelatedPage() }">
+                <ul class="sub_menu_drop" [class.hide-icons]="isConfirmationPage()" [ngClass]="{ 'cart-submenu-style': isCartRelatedPage() }">
                     <li><a href="#">Home Style 1</a></li>
                     <li><a href="#">Home Style 2</a></li>
                     <li><a href="#">Home Style 3</a></li>
@@ -19,7 +19,7 @@
             </li>
             <li class="shop_menu"><a href="#">Shop</a></li>
             <li class="menu"><a href="#">Product +</a>
-                <ul class="sub_menu_drop">
+                <ul class="sub_menu_drop" [class.hide-icons]="isConfirmationPage()">
                     <li><a href="#">Product Variants</a></li>
                     <li><a href="#">Product Countdown</a></li>
                     <li><a href="#">Product Media</a></li>
@@ -28,13 +28,13 @@
             <li><a href="#">Blogs</a></li>
             <li><a href="#">contact</a></li>
             <li class="menu"><a href="#">Pages +</a>
-                <ul class="sub_menu_drop">
+                <ul class="sub_menu_drop" [class.hide-icons]="isConfirmationPage()">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Faq</a></li>
                 </ul>
             </li>
         </ul>
-        <div class="header_options">
+        <div class="header_options" [class.hide-icons]="isConfirmationPage()">
             <ul>
                 <li>
                     <div class="search">

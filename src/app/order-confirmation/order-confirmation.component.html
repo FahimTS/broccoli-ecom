@@ -1,0 +1,43 @@
+<!-- cart banner start -->
+<div class="cart_banner">
+    <div class="container">
+        <div class="menu_bar">
+            <app-navbar></app-navbar>
+        </div>
+
+        <div class="cart_inner">
+            <div class="welcome_part">
+                <h6>// Welcome to our company</h6>
+                <h1>Order Confirmation</h1>
+            </div>
+            <div class="back_home_part">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>Order</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart banner end -->
+
+
+<!-- oder confirmation section start -->
+ <section class="order_confirm" *ngIf="customer">
+    <div class="container">
+        <div class="personal_info">
+            <h2>Personal Information</h2>
+            <p>Full Name: <span>{{customer?.fullName}}</span></p>
+            <p>Phone Number: <span>{{customer?.phone}}</span></p>
+            <p>Address: <span>{{customer?. address}}</span></p>
+            <p>Order Note: <span>{{customer?.orderNote}}</span></p>
+        </div>
+         <div class="payment_details">
+            <h2>Payment Method</h2>
+            <h3>✅ Thanks for your order!</h3>
+            <p>Your order is being processed. You will receive your product within <strong>48 hours</strong>.</p>
+            <p><strong>Payment Method:</strong> {{ customer?.paymentMethod | titlecase }}</p>
+        </div>
+    </div>
+ </section>
+<!-- oder confirmation section end -->

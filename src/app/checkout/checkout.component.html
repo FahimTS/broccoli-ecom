@@ -31,75 +31,73 @@
     </div>
  </div>
 <!-- return customer end -->
-
+ <form [formGroup]="checkoutForm" (ngSubmit)="placeOrder()">
 <!-- billing details start -->
  <div class="billing_details">
     <div class="container">
         <h3>Billing Details</h3>
         <div class="billing_info">
             <h5>Personal Information</h5>
-            <form>
+
                 <div class="form_feild">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="First Name" formControlName="firstName">
+                    <input type="text" placeholder="Last Name" formControlName="lastName">
                 </div>
                 <div class="form_feild">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="email" placeholder="Email" formControlName="email">
+                    <input type="text" placeholder="Phone" formControlName="phone">
                 </div>
                 <div class="form_feild">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="Company Name (optional)" formControlName="company">
                 </div>
                 <div class="select_input">
                     <h5>Country</h5>
-                    <select name="" id="">
+                    <select formControlName="country">
                         <option value="">Select</option>
-                        <option value="">Bangladesh</option>
-                        <option value="">Pakistan</option>
-                        <option value="">India</option>
-                        <option value="">UK</option>
-                        <option value="">US</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="India">India</option>
+                        <option value="UK">UK</option>
+                        <option value="US">US</option>
                     </select>
                 </div>
                 <div class="home_town">
                 <h5>Address</h5>
                 <div class="form_feild">
-                    <input type="text" placeholder="House number and street name">
-                    <input type="text" placeholder="Apartment, suite, unit etc (optional)">
+                    <input type="text" placeholder="House number and street name" formControlName="address1">
+                    <input type="text" placeholder="Apartment, suite, unit etc (optional)" formControlName="address2">
                 </div>
                 </div>
                 <div class="address">
                     <div class="towncity">
                         <h5>Town / City</h5>
                         <div class="feild">
-                            <input type="text" placeholder="City">
+                            <input type="text" placeholder="City" formControlName="city">
                         </div>
                     </div>
                     <div class="towncity">
                         <h5>State</h5>
                         <div class="feild">
-                            <input type="text" placeholder="State">
+                            <input type="text" placeholder="State" formControlName="state">
                         </div>
                     </div>
                     <div class="towncity">
                         <h5>Zip</h5>
                         <div class="feild">
-                            <input type="text" placeholder="Zip">
+                            <input type="text" placeholder="Zip" formControlName="zip">
                         </div>
                     </div>
                 </div>
                 <p>
-                    <label for="">
-                        <input type="checkbox" name="agree">
+                    <label>
+                        <input type="checkbox" formControlName="createAccount">
                          Create an account?
                     </label>
                 </p>
                 <div class="order_note">
                     <h5>Order Notes (optional)</h5>
-                    <textarea name="" id="" cols="60" rows="6" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                    <textarea cols="60" rows="6" placeholder="Notes about your order, e.g. special notes for delivery." formControlName="orderNote"></textarea>
                 </div>
-            </form>
         </div>
     </div>
  </div>
@@ -108,101 +106,97 @@
 <!-- payment method start -->
  <div class="method_cart">
     <div class="container">
-        <div class="payment_method">
+        <div class="payment_minner d-flex">
+            <div class="payment_method">
             <h2>Payment Method</h2>
 
             <div class="card_method">
-
+              
             <div class="payment-option" (click)="togglePayment('check')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'check'"
-            />
+            <input type="radio" name="payment" [checked]="selectedMethod === 'check'">
             <label>Check payments</label>
             </div>
-
             <div *ngIf="selectedMethod === 'check'" class="collapse-box">
             <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
             </div>
 
             <div class="payment-option" (click)="togglePayment('card')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'card'"
-            />
+            <input type="radio" name="payment" [checked]="selectedMethod === 'card'">
             <label>Credit Card</label>
             </div>
-
             <div *ngIf="selectedMethod === 'card'" class="collapse-box">
             <p>Enter your card details:</p>
-            <input type="text" placeholder="Card Number" />
-            <input type="text" placeholder="MM/YY" />
-            <input type="text" placeholder="CVV" />
+            <input type="text" placeholder="Card Number" formControlName="cardNumber" />
+            <input type="text" placeholder="MM/YY" formControlName="cardExpiry" />
+            <input type="text" placeholder="CVV" formControlName="cardCvv" />
             </div>
 
             <div class="payment-option" (click)="togglePayment('cash')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'cash'"
-            />
+            <input type="radio" name="payment" [checked]="selectedMethod === 'cash'">
             <label>Cash on delivery</label>
             </div>
-
             <div *ngIf="selectedMethod === 'cash'" class="collapse-box">
             <p>Pay with cash upon delivery.</p>
             </div>
 
-                <div class="payment-option" (click)="togglePayment('bkash')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'bkash'"
-            />
+            <div class="payment-option" (click)="togglePayment('bkash')">
+            <input type="radio" name="payment" [checked]="selectedMethod === 'bkash'" (change)="togglePayment('bkash')">
             <label>bKash</label>
             </div>
-
             <div *ngIf="selectedMethod === 'bkash'" class="collapse-box">
-            <p>bKash Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
-            <p>Send money and enter Transaction ID:</p>
-            <input type="text" placeholder="TrxID" />
+            <p>bKash Number: <input type="text" placeholder="01XXXXXXXXX" formControlName="bkashNumber" /></p>
+            <p>Transaction ID: <input type="text" placeholder="TrxID" formControlName="bkashTrxId" /></p>
             </div>
 
             <div class="payment-option" (click)="togglePayment('nagad')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'nagad'"
-            />
+            <input type="radio" name="payment" [checked]="selectedMethod === 'nagad'" (change)="togglePayment('nagad')">
             <label>Nagad</label>
             </div>
-
             <div *ngIf="selectedMethod === 'nagad'" class="collapse-box">
-            <p>Nagad Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
-            <p>Enter Transaction ID:</p>
-            <input type="text" placeholder="TrxID" />
+            <p>Nagad Number: <input type="text" placeholder="01XXXXXXXXX" formControlName="nagadNumber" /></p>
+            <p>Transaction ID: <input type="text" placeholder="TrxID" formControlName="nagadTrxId" /></p>
             </div>
 
             <div class="payment-option" (click)="togglePayment('rocket')">
-            <input
-                type="radio"
-                name="payment"
-                [checked]="selectedMethod === 'rocket'"
-            />
+            <input type="radio" name="payment" [checked]="selectedMethod === 'rocket'" (change)="togglePayment('rocket')">
             <label>Rocket</label>
             </div>
-
             <div *ngIf="selectedMethod === 'rocket'" class="collapse-box">
-            <p>Rocket Number: <input type="text" placeholder="01XXXXXXXXX" /></p>
-            <p>Enter Transaction ID:</p>
-            <input type="text" placeholder="TrxID" />
-            </div>
+            <p>Rocket Number: <input type="text" placeholder="01XXXXXXXXX" formControlName="rocketNumber" /></p>
+            <p>Transaction ID: <input type="text" placeholder="TrxID" formControlName="rocketTrxId" /></p>
             </div>
 
             </div>
+            <div class="tearms">
+                <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+            </div>
+            <!-- place order button -->
+        <button class="order_btn" (click)="placeOrder()">Place Order</button>
+        </div>
+
+         <div class="cart_total">
+            <h2>Cart Totals</h2>
+            <div class="cart_pay_details">
+                <div *ngFor="let item of cartItems" class="cart_pitem">
+                <div class="title">{{ item.name }} × {{ item.quantity }}</div>
+                <div class="price">${{ (item.price * item.quantity) | number:'1.2-2' }}</div>
+                </div>
+                <div class="shpping_handing">
+                <div class="title">Shipping and Handling</div>
+                <div class="price">${{ shipping | number:'1.2-2' }}</div>
+                </div>
+                <div class="vat">
+                <div class="title">VAT</div>
+                <div class="price">${{ vat | number:'1.2-2' }}</div>
+                </div>
+                <div class="order_total">
+                <div class="title">Order Total</div>
+                <div class="price">${{ total | number:'1.2-2' }}</div>
+                </div>
+            </div>
+         </div>
+        </div>
         </div>
     </div>
-
+    </form>
 <!-- payment method end -->

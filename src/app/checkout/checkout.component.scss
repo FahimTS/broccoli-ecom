@@ -225,15 +225,15 @@ label {
     font-weight: 600;
     color: #071c1f;
 }
-// input[type="text"] {
-//   display: block;
-//   width: 100%;
-//   margin-top: 5px;
-//   margin-bottom: 10px;
-//   padding: 8px;
-//   border-radius: 4px;
-//   border: 1px solid #ccc;
-// }
+.collapse-box input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 .method_cart {margin-top: 75px;}
 
 .payment_method {
@@ -252,4 +252,70 @@ label {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+.tearms p {
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin-top: 30px;
+}
+
+button.order_btn {
+    margin-top: 18px;
+    padding: 17px 40px;
+    background: #80B500;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    &:hover{
+        background-color: #699403;
+        transition: all 0.3s;
+    }
+}
+.payment_minner.d-flex {
+    justify-content: space-between;
+}
+
+.cart_total h2 {
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.cart_pay_details {
+    width: 450px;
+    background: #F7F8FA;
+    padding: 20px 0px;
+    margin-top: 30px;
+}
+
+.cart_pitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-family: 'Rajdhani';
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 45px;
+}
+
+.shpping_handing, .vat, .order_total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 13px;
+    padding-left: 15px;
+    padding-right: 45px;
+}
+.order_total{
+    font-weight: 700 !important;
+}
+.cart_pitem.ng-star-inserted {
+    padding-bottom: 15px;
 }

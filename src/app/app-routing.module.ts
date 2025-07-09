@@ -7,6 +7,7 @@ import { PractiseComponent } from './practise/practise.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductViewCartComponent } from './product-view-cart/product-view-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'practise', component: PractiseComponent},
   {path: 'cart', component: CartComponent},
   {path: 'product-view/:id', component: ProductViewCartComponent},
-  {path: 'checkout', component: CheckoutComponent}
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'order-confirmation', component: OrderConfirmationComponent}
 
 ];
 

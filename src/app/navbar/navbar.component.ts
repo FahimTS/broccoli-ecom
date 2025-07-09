@@ -40,8 +40,12 @@ export class NavbarComponent implements OnInit {
   }
 
   isCartRelatedPage(): boolean {
-    const cartPage = ['/cart', '/checkout'];
+    const cartPage = ['/cart', '/checkout', '/order-confirmation'];
     return cartPage.includes(this.currentRoute) || this.currentRoute.startsWith('/product-view/');
+  }
+
+  isConfirmationPage(): boolean {
+    return this.router.url.includes('order-confirmation');
   }
 
   openMenu() {

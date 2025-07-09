@@ -47,7 +47,7 @@ span.badge {
 .header_main_menu li>ul, .sub_menu_drop {
     width: 230px;
     position: absolute;
-    display: inline-block !important;
+    display: inline-block;
     top: 230%;
     left: 0px;
     background: #fff;
@@ -281,4 +281,8 @@ h6 {margin-bottom: 5px;}
 section.cart.cartClass{
     right: 0px;
     transition: .5s ease 0s;
+}
+
+.hide-icons {
+  display: none !important; // বা visibility: hidden;
 }
